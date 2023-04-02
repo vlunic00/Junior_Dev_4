@@ -18,15 +18,17 @@ const CurrentQuestion = styled.p`
     font-size: 32px;
 `
 
-function Question(){
+function QuestionBox(props){
+
     return (
         <>
             <QuestionField>
-                <Title>Pitanje 01:</Title>
+                <Title>Pitanje {props.questionNumber}:</Title>
                 <CurrentQuestion>Koje je odi pitanje?</CurrentQuestion>
             </QuestionField>
+            <button onClick={props.get}>Dohvati</button>
         </>
     )
 }
 
-export default Question
+export default QuestionBox
